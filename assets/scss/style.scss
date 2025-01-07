@@ -8,14 +8,18 @@ Version: 1.00
 @use './slices/function' as *;
 @use './slices/variable' as *;
 @use './slices/common' as *;
-@use './slices/buttons' as *;
 @use './slices/extend' as *;
 @use './slices/mixin' as *;
 
-/* Navbar Styles */
+/* Section Navbar Styles */
 .navbar {
     @extend %u-spacing-inline;
     padding-block: toRem(20);
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
 
     &__wrapper,
     &__brand
@@ -26,18 +30,178 @@ Version: 1.00
 
     &__wrapper {
         @extend %mx-auto;
+        @extend %space-between;
         max-width: 1300px;
-        justify-content: space-between;
     }
     
     &__brand {
         padding: toRem(5);
         gap: toRem(16);
+
+        &__image {
+            filter: drop-shadow(0 0 5px #d664c6);
+        }
         
         &__text {
             @extend %fw-700;
             font-size: toRem(12);
             letter-spacing: -0.025em;
         }
+    }
+}
+
+/* Section Header Styles */
+.section-header {
+    padding-top: toRem(183);
+    padding-bottom: toRem(134);
+
+    &__wrapper {
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %flex-column;
+    }
+    
+    &__title {
+        max-width: 17ch;
+        margin-bottom: toRem(24);
+    }
+    
+    &__text {
+        margin-bottom: toRem(52);
+    }
+    
+    &__btn {
+        @extend %cursor-pointer;
+        @extend %u-text-center;
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %flex-column;
+        background-color: transparent;
+        gap: toRem(4);
+        border: 0;
+        padding: 5px;
+        margin-top: toRem(78);
+    }
+}
+
+/* Section Details Styles */
+.section-details {
+    &__wrapper {
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %space-between;
+        @extend %flex-wrap;
+        gap: toRem(20);
+    }
+
+    &__title {
+        max-width: 17ch;
+    }
+
+    &__text {
+        max-width: 54ch;
+    }
+}
+
+/* Section Features */
+.section-features {
+    &__wrapper {
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %space-between;
+    }
+
+    &__title {
+        max-width: 17ch;
+    }
+
+    &__text {
+        max-width: 54ch;
+
+        &__inner {
+            color: #ffffff;
+        }
+    }
+}
+
+/* Section CTA Styles */
+.section-cta {
+    padding-top: toRem(80);
+    padding-bottom: toRem(64);
+
+    &__wrapper {
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %flex-column;
+        @extend %u-text-center;
+        justify-content: center;
+    }
+
+    &__title {
+        max-width: 24ch;
+    }
+
+    &__text {
+        max-width: 38ch;
+        margin-top: toRem(10);
+        margin-bottom: toRem(34);
+    }
+}
+
+/* Section Footer Styles */
+.footer {
+    padding-bottom: toRem(96);
+
+    &__top {
+        @extend %d-flex;
+        @extend %align-center;
+        @extend %flex-wrap;
+        @extend %space-between;
+        gap: toRem(20);
+        padding-top: toRem(20);
+        padding-bottom: toRem(20);
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+    }
+
+    &__nav,
+    &__social
+    {
+        @extend %d-flex;
+        @extend %flex-wrap;
+        list-style-type: none;
+
+        a{
+            display: inline-block;
+            transition: color 0.2s ease-in-out;
+    
+            &:hover,
+            &:focus-visible
+            {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &__nav {
+        gap: toRem(16);
+
+        &__item {
+            font-size: toRem(13);
+            padding: toRem(4);
+            line-height: 1.53846153846;
+        }
+    }
+    
+    &__social {
+        gap: toRem(26);
+        
+        &__link {
+            padding: toRem(4);
+        }
+    }
+
+    &__text {
+        color: #71717A;
+        max-width: 90ch;
     }
 }

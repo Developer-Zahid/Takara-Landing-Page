@@ -1,4 +1,6 @@
+@use './variable' as *;
 @use './extend' as *;
+@use './function' as *;
 
 *,
 *::before,
@@ -77,6 +79,61 @@ figure{
 	margin-bottom: 0;
 }
 
+p {
+	font-size: toRem(18);
+	line-height: 1.55555555556;
+}
+
+.u-spacing-bottom {
+	padding-bottom: toRem(182);
+}
+
+.btn {
+	--_border: 1px;
+    @extend %overflow-hidden;
+    @extend %u-position-relative;
+    @extend %fw-500;
+    color: var(--color-text);
+    font-size: toRem(14);
+	display: inline-flex;
+	border-radius: 50em;
+	background-color: rgba($color: #fff, $alpha: 0.1);
+	padding: var(--_border);
+	transition: box-shadow 0.2s linear;
+
+	&::after {
+		@extend %common-pseudo;
+		@extend %z-n1;
+		bottom: 0;
+		height: var(--_border);
+		left: 20%;
+		right: 20%;
+		background-image: linear-gradient(90deg, transparent 0%, #F978E1 50%, transparent 100%);
+		opacity: 0.9;
+		transition: all 0.2s linear;
+	}
+	
+	&__content {
+		border-radius: inherit;
+		padding: toRem(6) toRem(20);
+		color: var(--color-text);
+		background-color: var(--color-body);
+		font-size: toRem(14);
+		line-height: 1.71428571429;
+	}
+
+	&:hover,
+	&:focus-visible
+	{
+		box-shadow: 0 5px 10px rgba($color: #F978E1, $alpha: 0.1);
+		&::after {
+			left: 0;
+			right: 0;
+			height: 80%;
+		}
+	}
+}
+
 .container {
 	@extend %mx-auto;
 	max-width: 1218px;
@@ -88,4 +145,54 @@ figure{
 
 .u-text-center {
 	@extend %u-text-center;
+}
+
+.u-color-text {
+	color: rgba($color-text, $alpha: 0.8);
+}
+
+.u-text-white {
+	color: #ffffff;
+}
+
+.heading-h1 {
+	@extend %fw-700;
+	font-size: toRem(72);
+	line-height: 1.06944444444;
+}
+
+.heading-h2 {
+	@extend %fw-700;
+	font-size: toRem(48);
+	line-height: 1.0625;
+}
+
+.heading-h3 {
+	@extend %fw-700;
+	font-size: toRem(32);
+	line-height: 1.25;
+	letter-spacing: -0.025em;
+}
+
+.text-lg {
+	font-size: toRem(20);
+	line-height: 1.6;
+}
+
+.text-sm {
+	font-size: toRem(14);
+	line-height: 1.71428571429;
+}
+
+.common-section-header {
+	margin-bottom: toRem(58);
+
+	&__title {
+		max-width: 18ch;
+		margin-bottom: toRem(20);
+	}
+	
+	&__text {
+		max-width: 46ch;
+	}
 }

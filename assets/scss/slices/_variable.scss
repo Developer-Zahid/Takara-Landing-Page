@@ -1,5 +1,9 @@
+$color-primary: #F978E1;
+$color-text: #A1A1AA;
+
 :root {
     --font-primary: "Inter", serif;
-    --color-text: #A1A1AA;
+    --color-primary: #{$color-primary};
+    --color-text: #{$color-text};
     --color-body: #09090B;
 }

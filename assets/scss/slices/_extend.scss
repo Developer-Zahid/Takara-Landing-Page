@@ -2,18 +2,6 @@
     transition: all ease-in-out .25s;
 }
 
-%uppercase{
-    text-transform: uppercase;
-}
-
-%rounded-pill{
-    border-radius: 50rem;
-}
-
-%rounded-circle{
-    border-radius: 50%;
-}
-
 %cursor-pointer{
     cursor: pointer;
 }
@@ -70,6 +58,10 @@
     position: absolute;
 }
 
+%z-n1{
+    z-index: -1;
+}
+
 %overflow-hidden{
     overflow: hidden;
 }
@@ -85,6 +77,26 @@
 
 %d-flex{
     display: flex;
+}
+
+%align-center{
+    align-items: center;
+}
+
+%space-between{
+    justify-content: space-between;
+}
+
+%flex-column{
+    flex-direction: column;
+}
+
+%flex-wrap{
+    flex-wrap: wrap;
+}
+
+%u-position-relative{
+    position: relative;
 }
 
 %u-text-center{

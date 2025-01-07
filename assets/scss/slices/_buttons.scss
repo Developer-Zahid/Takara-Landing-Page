@@ -1,8 +1,0 @@
-@use './function' as *;
-@use './extend' as *;
-
-.btn {
-    @extend %fw-500;
-    color: var(--color-text);
-    font-size: toRem(14);
-}
