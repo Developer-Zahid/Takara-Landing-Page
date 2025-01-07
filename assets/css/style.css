@@ -1,0 +1,138 @@
+/* 
+------------------
+Template Name: Takara Landing Page
+Version: 1.00
+------------------
+*/
+:root {
+  --font-primary: "Inter", serif;
+  --color-text: #A1A1AA;
+  --color-body: #09090B;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.navbar__brand__text {
+  font-weight: 700;
+}
+
+.navbar__wrapper, .container {
+  margin-inline: auto;
+}
+
+.navbar__wrapper, .navbar__brand {
+  display: flex;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.navbar, .u-spacing-inline {
+  padding-inline: clamp(1rem, 1.5038vw + 0.6476rem, 2rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+body {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  background-color: var(--color-body);
+  overflow-x: clip;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  word-wrap: anywhere;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  color: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1218px;
+}
+
+.btn {
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding-block: 1.25rem;
+}
+.navbar__wrapper, .navbar__brand {
+  align-items: center;
+}
+.navbar__wrapper {
+  max-width: 1300px;
+  justify-content: space-between;
+}
+.navbar__brand {
+  padding: 0.3125rem;
+  gap: 1rem;
+}
+.navbar__brand__text {
+  font-size: 0.75rem;
+  letter-spacing: -0.025em;
+}/*# sourceMappingURL=style.css.map */

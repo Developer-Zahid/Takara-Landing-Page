@@ -1,0 +1,112 @@
+//Responsive Bootstrap Breakpoint:
+
+//max-xxxs
+@mixin max-xxxs {
+    @media (max-width: 319.98px) {
+        @content;
+    }
+}
+
+//min-xxs
+@mixin min-xxs {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+//max-xxs
+@mixin max-xxs {
+    @media (max-width: 479.98px) {
+        @content;
+    }
+}
+
+//min-xs
+@mixin min-xs {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+//max-xs
+@mixin max-xs {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+
+//min-sm
+@mixin min-sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+//max-sm
+@mixin max-sm {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+//min-md
+@mixin min-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+//max-md
+@mixin max-md {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+//min-lg
+@mixin min-lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+//max-lg
+@mixin max-lg {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+//min-xl
+@mixin min-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+//max-xl
+@mixin max-xl {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+//min-xxl
+@mixin min-xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+//min-xxxl
+@mixin min-xxxl {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        @content;
+    }
+}
+
+@mixin motion {
+    @media (prefers-reduced-motion: no-preference){
+        @content;
+    }
+}

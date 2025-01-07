@@ -1,0 +1,91 @@
+@use './extend' as *;
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+	font-size: 16px;
+	text-size-adjust: none;
+}
+
+body {
+	color: var(--color-text);
+	font-size: 1rem;
+	font-weight: 400;
+    font-family: var(--font-primary);
+	background-color: var(--color-body);
+	overflow-x: clip;
+}
+
+a,
+button,
+input,
+select,
+textarea
+{
+	font: inherit;
+	word-wrap: anywhere;
+}
+
+a,
+button,
+input,
+select,
+textarea
+{
+	color: inherit;
+}
+
+a,
+a:hover,
+a:focus,
+a:active
+{
+	text-decoration: none;
+}
+
+img,
+video,
+svg
+{
+	display: block;
+	max-width: 100%;
+}
+
+img,
+video
+{
+	object-fit: cover;
+}
+
+img{
+	width: auto;
+	height: auto;
+}
+
+figure{
+	margin-bottom: 0;
+}
+
+.container {
+	@extend %mx-auto;
+	max-width: 1218px;
+}
+
+.u-spacing-inline {
+	@extend %u-spacing-inline;
+}
+
+.u-text-center {
+	@extend %u-text-center;
+}

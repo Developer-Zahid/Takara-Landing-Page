@@ -1,0 +1,43 @@
+/* 
+------------------
+Template Name: Takara Landing Page
+Version: 1.00
+------------------
+*/
+
+@use './slices/function' as *;
+@use './slices/variable' as *;
+@use './slices/common' as *;
+@use './slices/buttons' as *;
+@use './slices/extend' as *;
+@use './slices/mixin' as *;
+
+/* Navbar Styles */
+.navbar {
+    @extend %u-spacing-inline;
+    padding-block: toRem(20);
+
+    &__wrapper,
+    &__brand
+    {
+        @extend %d-flex;
+        align-items: center;
+    }
+
+    &__wrapper {
+        @extend %mx-auto;
+        max-width: 1300px;
+        justify-content: space-between;
+    }
+    
+    &__brand {
+        padding: toRem(5);
+        gap: toRem(16);
+        
+        &__text {
+            @extend %fw-700;
+            font-size: toRem(12);
+            letter-spacing: -0.025em;
+        }
+    }
+}
