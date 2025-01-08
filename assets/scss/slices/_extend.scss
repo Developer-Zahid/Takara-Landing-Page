@@ -75,6 +75,10 @@
     margin-inline: auto;
 }
 
+%d-grid{
+    display: grid;
+}
+
 %d-flex{
     display: flex;
 }
@@ -93,6 +97,10 @@
 
 %flex-wrap{
     flex-wrap: wrap;
+}
+
+%u-position-absolute{
+    position: absolute;
 }
 
 %u-position-relative{

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takara Technologies Inc.</title>
+
+    <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Style Link -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
@@ -25,20 +29,23 @@
         <header class="section-header u-spacing-inline">
             <div class="container u-text-center">
                 <div class="section-header__wrapper">
-                    <h1 class="section-header__title heading-h1">
+                    <img class="section-header__particle" src="./assets/images/banner-dots.png" alt="particle dots" width="921" height="359" loading="eager" />
+                    <h1 class="section-header__title heading-h1 u-gradient-text">
                         Add An Extra
                         <span
+                            class="section-header__title__count"
                             data-target="count"
                             data-count-start="500"
                             data-count-end="1000"
                             data-count-duration="2000"
                             data-count-prefix="£"
                             data-count-suffix="+"
-                        >£1,000+</span><br>
-                        To Your Income</h1>
+                        >£1,000+</span>
+                        <span class="section-header__title__bottom">To Your Income</span>
+                    </h1>
                     <p class="section-header__text text-lg">Learn How To Take Advantage Of Price Glitches, Limited-Edition Items & Trading Markets ️‍🔥</p>
                     <a href="#!" class="btn"><span class="btn__content">Join Us Today</span></a>
-                    <button type="button" class="section-header__btn text-sm">
+                    <button type="button" class="section-header__btn text-sm" data-goto="#section-features">
                         Learn more
                         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.98438 3.75V14.25" stroke="#A1A1AA" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,87 +60,156 @@
         <section class="section-details u-spacing-inline u-spacing-bottom">
             <div class="container">
                 <div class="section-details__wrapper">
-                    <h2 class="section-details__title heading-h2">Who said money has to be boring?</h2>
+                    <h2 class="section-details__title heading-h2 u-gradient-text">Who said money has to be boring?</h2>
                     <p class="section-details__text u-color-text">We empower all customers with the latest technology & information to ensure they're making a profit or saving all the time. With a membership you'll have access to the best price glitches & the latest opportunities to make money before anyone else. <span class="u-text-white">It's as simple as buy & sell with Takara.</span></p>
                 </div>
             </div>
         </section>
 
         <!-- Section Features -->
-        <section class="section-features u-spacing-inline u-spacing-bottom">
+        <section id="section-features" class="section-features u-spacing-inline u-spacing-bottom">
             <div class="container">
                 <div class="common-section-header">
-                    <h2 class="common-section-header__title heading-h2">Everything you need. Nothing you don't</h2>
+                    <h2 class="common-section-header__title heading-h2 u-gradient-text">Everything you need. Nothing you don't</h2>
                     <p class="common-section-header__text u-color-text">All the tools you need are just fingertips away. Have a look at some of the assets we provide you.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section -->
-        <section class="u-spacing-inline u-spacing-bottom">
-            <div class="container">
-                <div class="common-section-header">
-                    <h2 class="common-section-header__title heading-h2">Elevate To New Heights</h2>
-                    <p class="common-section-header__text u-color-text">We show you how to make a profit online. <span class="u-text-white">Profitability</span> has never been easier.</p>
+                <div class="section-features__grid">
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-features/feature-1.png" alt="feature preview" width="384" height="358" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">Guaranteed Increase In Revenue</h3>
+                            <p class="card__text text-sm u-color-text">Not Many Places Can Guarantee An Increase In Revenue From Day 1. We Can Though.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-features/feature-2.png" alt="feature preview" width="384" height="358" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">In-House Software</h3>
+                            <p class="card__text text-sm u-color-text">Bypass Queues On Tickets & Sought After Releases With Our In-House Queue Bypass</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-features/feature-3.png" alt="feature preview" width="384" height="358" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">The Latest Education</h3>
+                            <p class="card__text text-sm u-color-text">Ensure That You're Informed On Money-Making Methods With The Latest Tips & Tricks</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-features/feature-4.png" alt="feature preview" width="696" height="288" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">Watch Over 455+ Sites For New Products & Deals</h3>
+                            <p class="card__text text-sm u-color-text">Leave The Technical Side To Us As We Monitor Top Sites For Items Which You Can Profit From. All You'll Need To Do Is Follow Our Calls.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-features/feature-5.png" alt="feature preview" width="488" height="366" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">Experience Results</h3>
+                            <p class="card__text text-sm u-color-text">We've Helped Thousands Of People Thousands Over The Years. We Know What We’re Capable Of & Ensure Nobody Is Left Behind. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
+    </main>
+    <div class="section-combine">
+        <!-- Section Process -->
+        <section class="section-process u-spacing-inline u-spacing-bottom">
+            <div class="container">
+                <div class="common-section-header">
+                    <h2 class="common-section-header__title heading-h2 u-gradient-text">Elevate To New Heights</h2>
+                    <p class="section-process__text common-section-header__text u-color-text">We show you how to make a profit online. <span class="u-text-white">Profitability</span> has never been easier.</p>
+                </div>
+                <div class="section-process__grid">
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-process/process-1.png" alt="process preview" width="592" height="366" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">Simplified Trading</h3>
+                            <p class="card__text text-sm u-color-text">Harness the ability to trade directly from successful traders & make thousands each month from every way possible.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure class="card__header">
+                            <img class="card__image" src="./assets/images/section-process/process-2.png" alt="process preview" width="592" height="366" loading="lazy" />
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="card__title heading-h4">AI Powered Arbitrage Leads</h3>
+                            <p class="card__text text-sm u-color-text">We leverage AI models to provide you with profitable leads which you can sell on local & global marketplaces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Section CTA -->
         <section class="section-cta u-spacing-inline u-spacing-bottom">
+            <img class="section-cta__shadow" src="./assets/images/cta-top-shadow.png" alt="shadow" width="600" height="200" loading="lazy" />
+            <img class="section-cta__line" src="./assets/images/cta-line.png" alt="line" width="500" height="1" loading="lazy" />
             <div class="container">
                 <div class="section-cta__wrapper">
-                    <h2 class="section-cta__title heading-h3">We Minimise Your Risk & Maximise Your Profits.</h2>
+                    <h2 class="section-cta__title heading-h3 u-gradient-text">We Minimise Your Risk & Maximise Your Profits.</h2>
                     <p class="section-cta__text u-color-text">We're The Only Financial Community You'll Need. The One And Only</p>
                     <a href="#!" class="btn"><span class="btn__content">Join Us Today</span></a>
                 </div>
             </div>
         </section>
-    </main>
-    <!-- Section Footer -->
-    <footer class="footer u-spacing-inline">
-        <div class="container">
-            <div class="footer__top">
-                <ul class="footer__nav">
-                    <li>
-                        <span class="footer__nav__item">© 2025 <a href="./index.html">Takara Technologies Inc.</a></span>
-                    </li>
-                    <li>
-                        <a href="#!" class="footer__nav__item">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="footer__nav__item">Terms of Use</a>
-                    </li>
-                </ul>
-                <ul class="footer__social">
-                    <li>
-                        <a href="#!" target="_blank" class="footer__social__link" title="Instagram">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.33322 10.0049C8.33062 8.53238 9.52244 7.33616 10.9947 7.3336C12.4672 7.33072 13.6637 8.522 13.6665 9.99482C13.6694 11.4676 12.4776 12.6636 11.0048 12.6664C9.53253 12.6693 8.33606 11.4777 8.33322 10.0049ZM6.89234 10.0078C6.89675 12.2766 8.7394 14.1118 11.0077 14.1073C13.2762 14.1029 15.1124 12.2608 15.1079 9.99197C15.1035 7.72394 13.2606 5.88772 10.9918 5.89215C8.72356 5.89656 6.88793 7.73947 6.89234 10.0078ZM14.3019 5.72365C14.3029 6.25347 14.7336 6.68247 15.2635 6.68144C15.7935 6.68037 16.2225 6.24984 16.2217 5.72003C16.2207 5.19022 15.7899 4.76097 15.2599 4.76203C14.7298 4.76306 14.3008 5.19384 14.3019 5.72365ZM7.78009 16.5174C7.00015 16.4835 6.57662 16.3539 6.29437 16.2453C5.92059 16.1006 5.65387 15.9272 5.37315 15.6486C5.09296 15.3689 4.91902 15.103 4.77309 14.73C4.66346 14.4477 4.53152 14.0247 4.49496 13.2447C4.4553 12.4015 4.44624 12.1485 4.44237 10.0124C4.43821 7.87688 4.44599 7.62388 4.4828 6.77991C4.51621 6.0005 4.64662 5.5764 4.75496 5.2944C4.89959 4.92012 5.07249 4.6539 5.35165 4.37321C5.63131 4.0925 5.89724 3.91909 6.27049 3.77315C6.55253 3.66296 6.97553 3.53206 7.75522 3.49503C8.59891 3.45509 8.85162 3.44656 10.9872 3.4424C13.1232 3.43824 13.3762 3.44578 14.2202 3.48284C14.9996 3.51678 15.4236 3.64587 15.7054 3.755C16.0794 3.89962 16.3461 4.07203 16.6266 4.35168C16.907 4.63137 17.081 4.89678 17.2269 5.27084C17.337 5.55206 17.468 5.97559 17.5048 6.75503C17.545 7.59872 17.554 7.85172 17.5579 9.98729C17.562 12.1234 17.5543 12.3764 17.5172 13.2199C17.4833 13.9998 17.3539 14.4236 17.2451 14.7061C17.1004 15.0796 16.9275 15.3464 16.6481 15.6271C16.3687 15.9067 16.1028 16.0812 15.7293 16.2271C15.4477 16.337 15.0242 16.4682 14.2451 16.5052C13.4014 16.5449 13.1486 16.554 11.0123 16.5579C8.87675 16.562 8.62406 16.554 7.78009 16.5174ZM7.68678 2.0554C6.83556 2.09559 6.25418 2.2319 5.74612 2.43099C5.22021 2.63602 4.7744 2.91077 4.33093 3.35609C3.8869 3.80165 3.61421 4.24825 3.41074 4.77468C3.21377 5.28403 3.08027 5.86569 3.04268 6.71744C3.00536 7.57075 2.9968 7.84291 3.00096 10.0153C3.00511 12.1874 3.01468 12.4601 3.05536 13.3137C3.09605 14.1646 3.2319 14.7458 3.43096 15.254C3.63624 15.78 3.91074 16.2256 4.3563 16.6693C4.80162 17.1131 5.24849 17.3855 5.77518 17.5893C6.28399 17.786 6.86587 17.92 7.71737 17.9573C8.57066 17.9949 8.84306 18.0032 11.0149 17.9991C13.1878 17.9949 13.4602 17.9853 14.3135 17.9449C15.1647 17.9042 15.7456 17.7679 16.2541 17.5693C16.78 17.3635 17.2259 17.0895 17.6694 16.6439C18.1129 16.1986 18.3855 15.7517 18.589 15.225C18.786 14.7162 18.92 14.1343 18.957 13.2834C18.9944 12.4295 19.0032 12.1568 18.999 9.98469C18.9949 7.81231 18.9851 7.54016 18.9446 6.68713C18.9042 5.83537 18.7679 5.2545 18.569 4.74593C18.3635 4.22003 18.0893 3.77468 17.644 3.33068C17.1987 2.88718 16.7518 2.61396 16.2251 2.41102C15.716 2.21402 15.1344 2.07977 14.2829 2.04296C13.4296 2.00512 13.1572 1.99684 10.9846 2.00096C8.81247 2.00512 8.54006 2.01443 7.68678 2.0554Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!" target="_blank" class="footer__social__link" title="TikTok">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.9086 5.40739C14.0439 4.81035 13.42 3.85477 13.2253 2.74151C13.1833 2.50105 13.1599 2.25333 13.1599 2H10.4001L10.3954 13.7128C10.3493 15.0246 9.32982 16.0772 8.08012 16.0772C7.69169 16.0772 7.326 15.9746 7.00392 15.7948C6.26537 15.3835 5.75982 14.5638 5.75982 13.6207C5.75982 12.266 6.80082 11.1637 8.07981 11.1637C8.31872 11.1637 8.54767 11.2056 8.76416 11.2771V8.29361C8.53988 8.26095 8.31218 8.24116 8.07981 8.24116C5.27887 8.24116 3 10.654 3 13.6207C3 15.4405 3.85847 17.0512 5.16892 18.025C5.99375 18.6388 6.99769 19 8.08012 19C10.8814 19 13.1599 16.5868 13.1599 13.6207V7.68107C14.2424 8.50373 15.5687 8.98861 17 8.98861V6.06578C16.2291 6.06578 15.5111 5.82333 14.9086 5.40739Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!" target="_blank" class="footer__social__link" title="Twitter">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2.5H8.25L11.9842 7.71053L16.5 2.5H18.5L12.8895 8.97368L19 17.5H13.75L10.0158 12.2895L5.5 17.5H3.5L9.11053 11.0263L3 2.5ZM14.5204 16L5.92043 4H7.47957L16.0796 16H14.5204Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <p class="footer__text text-sm">Takara is a UK-based community dedicated to helping individuals make and save money through various online ventures, including reselling, deals, trading, Amazon FBA, and sneakers. Takara offers expert strategies and powerful tools to assist members in generating additional income and building sustainable income streams.</p>
-        </div>
-    </footer>
-    
 
+        <!-- Section Footer -->
+        <footer class="footer u-spacing-inline">
+            <div class="container">
+                <div class="footer__top">
+                    <ul class="footer__nav">
+                        <li>
+                            <span class="footer__nav__item">© 2025 <a href="./index.html">Takara Technologies Inc.</a></span>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__nav__item">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer__nav__item">Terms of Use</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__social">
+                        <li>
+                            <a href="#!" target="_blank" class="footer__social__link" title="Instagram">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.33322 10.0049C8.33062 8.53238 9.52244 7.33616 10.9947 7.3336C12.4672 7.33072 13.6637 8.522 13.6665 9.99482C13.6694 11.4676 12.4776 12.6636 11.0048 12.6664C9.53253 12.6693 8.33606 11.4777 8.33322 10.0049ZM6.89234 10.0078C6.89675 12.2766 8.7394 14.1118 11.0077 14.1073C13.2762 14.1029 15.1124 12.2608 15.1079 9.99197C15.1035 7.72394 13.2606 5.88772 10.9918 5.89215C8.72356 5.89656 6.88793 7.73947 6.89234 10.0078ZM14.3019 5.72365C14.3029 6.25347 14.7336 6.68247 15.2635 6.68144C15.7935 6.68037 16.2225 6.24984 16.2217 5.72003C16.2207 5.19022 15.7899 4.76097 15.2599 4.76203C14.7298 4.76306 14.3008 5.19384 14.3019 5.72365ZM7.78009 16.5174C7.00015 16.4835 6.57662 16.3539 6.29437 16.2453C5.92059 16.1006 5.65387 15.9272 5.37315 15.6486C5.09296 15.3689 4.91902 15.103 4.77309 14.73C4.66346 14.4477 4.53152 14.0247 4.49496 13.2447C4.4553 12.4015 4.44624 12.1485 4.44237 10.0124C4.43821 7.87688 4.44599 7.62388 4.4828 6.77991C4.51621 6.0005 4.64662 5.5764 4.75496 5.2944C4.89959 4.92012 5.07249 4.6539 5.35165 4.37321C5.63131 4.0925 5.89724 3.91909 6.27049 3.77315C6.55253 3.66296 6.97553 3.53206 7.75522 3.49503C8.59891 3.45509 8.85162 3.44656 10.9872 3.4424C13.1232 3.43824 13.3762 3.44578 14.2202 3.48284C14.9996 3.51678 15.4236 3.64587 15.7054 3.755C16.0794 3.89962 16.3461 4.07203 16.6266 4.35168C16.907 4.63137 17.081 4.89678 17.2269 5.27084C17.337 5.55206 17.468 5.97559 17.5048 6.75503C17.545 7.59872 17.554 7.85172 17.5579 9.98729C17.562 12.1234 17.5543 12.3764 17.5172 13.2199C17.4833 13.9998 17.3539 14.4236 17.2451 14.7061C17.1004 15.0796 16.9275 15.3464 16.6481 15.6271C16.3687 15.9067 16.1028 16.0812 15.7293 16.2271C15.4477 16.337 15.0242 16.4682 14.2451 16.5052C13.4014 16.5449 13.1486 16.554 11.0123 16.5579C8.87675 16.562 8.62406 16.554 7.78009 16.5174ZM7.68678 2.0554C6.83556 2.09559 6.25418 2.2319 5.74612 2.43099C5.22021 2.63602 4.7744 2.91077 4.33093 3.35609C3.8869 3.80165 3.61421 4.24825 3.41074 4.77468C3.21377 5.28403 3.08027 5.86569 3.04268 6.71744C3.00536 7.57075 2.9968 7.84291 3.00096 10.0153C3.00511 12.1874 3.01468 12.4601 3.05536 13.3137C3.09605 14.1646 3.2319 14.7458 3.43096 15.254C3.63624 15.78 3.91074 16.2256 4.3563 16.6693C4.80162 17.1131 5.24849 17.3855 5.77518 17.5893C6.28399 17.786 6.86587 17.92 7.71737 17.9573C8.57066 17.9949 8.84306 18.0032 11.0149 17.9991C13.1878 17.9949 13.4602 17.9853 14.3135 17.9449C15.1647 17.9042 15.7456 17.7679 16.2541 17.5693C16.78 17.3635 17.2259 17.0895 17.6694 16.6439C18.1129 16.1986 18.3855 15.7517 18.589 15.225C18.786 14.7162 18.92 14.1343 18.957 13.2834C18.9944 12.4295 19.0032 12.1568 18.999 9.98469C18.9949 7.81231 18.9851 7.54016 18.9446 6.68713C18.9042 5.83537 18.7679 5.2545 18.569 4.74593C18.3635 4.22003 18.0893 3.77468 17.644 3.33068C17.1987 2.88718 16.7518 2.61396 16.2251 2.41102C15.716 2.21402 15.1344 2.07977 14.2829 2.04296C13.4296 2.00512 13.1572 1.99684 10.9846 2.00096C8.81247 2.00512 8.54006 2.01443 7.68678 2.0554Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank" class="footer__social__link" title="TikTok">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.9086 5.40739C14.0439 4.81035 13.42 3.85477 13.2253 2.74151C13.1833 2.50105 13.1599 2.25333 13.1599 2H10.4001L10.3954 13.7128C10.3493 15.0246 9.32982 16.0772 8.08012 16.0772C7.69169 16.0772 7.326 15.9746 7.00392 15.7948C6.26537 15.3835 5.75982 14.5638 5.75982 13.6207C5.75982 12.266 6.80082 11.1637 8.07981 11.1637C8.31872 11.1637 8.54767 11.2056 8.76416 11.2771V8.29361C8.53988 8.26095 8.31218 8.24116 8.07981 8.24116C5.27887 8.24116 3 10.654 3 13.6207C3 15.4405 3.85847 17.0512 5.16892 18.025C5.99375 18.6388 6.99769 19 8.08012 19C10.8814 19 13.1599 16.5868 13.1599 13.6207V7.68107C14.2424 8.50373 15.5687 8.98861 17 8.98861V6.06578C16.2291 6.06578 15.5111 5.82333 14.9086 5.40739Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank" class="footer__social__link" title="Twitter">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2.5H8.25L11.9842 7.71053L16.5 2.5H18.5L12.8895 8.97368L19 17.5H13.75L10.0158 12.2895L5.5 17.5H3.5L9.11053 11.0263L3 2.5ZM14.5204 16L5.92043 4H7.47957L16.0796 16H14.5204Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer__text text-sm">Takara is a UK-based community dedicated to helping individuals make and save money through various online ventures, including reselling, deals, trading, Amazon FBA, and sneakers. Takara offers expert strategies and powerful tools to assist members in generating additional income and building sustainable income streams.</p>
+            </div>
+        </footer>
+    </div>
     <script src="./assets/js/script.js" defer></script>
 </body>
 </html>

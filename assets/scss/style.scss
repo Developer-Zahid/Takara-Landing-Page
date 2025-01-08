@@ -52,22 +52,47 @@ Version: 1.00
 
 /* Section Header Styles */
 .section-header {
-    padding-top: toRem(183);
-    padding-bottom: toRem(134);
+    --_width: 30%;
+    padding-top: clamp(8rem, 5.1692vw + 6.7885rem, 11.4375rem);
+    padding-bottom: clamp(5rem, 5.0752vw + 3.8105rem, 8.375rem);
+    background-image: radial-gradient(var(--_width, 30%) 50% at 50% 2%, rgba(145, 62, 143, 0.50) 0%, transparent 100%);
+
+    @include max-sm {
+        --_width: 70%;
+    }
 
     &__wrapper {
+        @extend %u-position-relative;
         @extend %d-flex;
         @extend %align-center;
         @extend %flex-column;
+    }
+
+    &__particle {
+        @extend %u-position-absolute;
+        @extend %select-none;
+        @extend %mx-auto;
+        top: toRem(30);
+        left: 0;
+        right: 0;
     }
     
     &__title {
         max-width: 17ch;
         margin-bottom: toRem(24);
+
+        &__count {
+            @include max-sm {
+                display: block;
+            }
+        }
+        &__bottom {
+            display: block;
+        }
     }
     
     &__text {
-        margin-bottom: toRem(52);
+        margin-bottom: clamp(1.5rem, 2.6316vw + .8832rem, 3.25rem);
     }
     
     &__btn {
@@ -80,7 +105,7 @@ Version: 1.00
         gap: toRem(4);
         border: 0;
         padding: 5px;
-        margin-top: toRem(78);
+        margin-top: clamp(3rem, 2.8195vw + 2.3392rem, 4.875rem);
     }
 }
 
@@ -92,6 +117,11 @@ Version: 1.00
         @extend %space-between;
         @extend %flex-wrap;
         gap: toRem(20);
+
+        @include max-xs {
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__title {
@@ -103,31 +133,79 @@ Version: 1.00
     }
 }
 
+.section-features__grid,
+.section-process__grid
+{
+    @extend %d-grid;
+    gap: clamp(1.25rem, 1.1278vw + .9857rem, 2rem);
+}
+
 /* Section Features */
 .section-features {
-    &__wrapper {
-        @extend %d-flex;
-        @extend %align-center;
-        @extend %space-between;
+    &__grid {
+        @include min-sm {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include min-lg {
+            grid-template-columns: repeat(9, 1fr);
+        }
     }
 
-    &__title {
-        max-width: 17ch;
-    }
+    .card {
+        @include min-lg {
+            grid-column: span 3;
+            
+            &:nth-of-type(4) {
+                grid-column: span 5;
 
+                .card__text {
+                    max-width: unset;
+                }
+            }
+            &:nth-of-type(5) {
+                grid-column: span 4;
+
+                .card__text {
+                    max-width: 50ch;
+                }
+            }
+        }
+    }
+}
+
+/* Section Process Styles */
+.section-process {
     &__text {
-        max-width: 54ch;
+        max-width: 32ch;
+    }
 
-        &__inner {
-            color: #ffffff;
+    &__grid {
+        @include min-sm {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
 
 /* Section CTA Styles */
 .section-cta {
+    @extend %u-position-relative;
     padding-top: toRem(80);
     padding-bottom: toRem(64);
+
+    &__shadow,
+    &__line
+    {
+        @extend %u-position-absolute;
+        @extend %select-none;
+        @extend %mx-auto;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__shadow {
+        transform: translateY(-50%);
+    }
 
     &__wrapper {
         @extend %d-flex;
@@ -148,19 +226,46 @@ Version: 1.00
     }
 }
 
+.section-combine {
+    @extend %u-position-relative;
+
+    &::before {
+        --_position: 70%;
+        @extend %select-none;
+        @extend %common-pseudo;
+        inset: 0;
+        background-image: radial-gradient(30% 20% at 50% var(--_position), rgba(145, 62, 143, 0.5) 0%, transparent 100%);
+        filter: blur(80px);
+        z-index: -1;
+        
+        @include min-sm {
+            --_position: 78%;
+            opacity: 0.6;
+            filter: blur(200px);
+        }
+    }
+}
+
 /* Section Footer Styles */
 .footer {
-    padding-bottom: toRem(96);
+    padding-bottom: clamp(3rem, 4.5113vw + 1.9427rem, 6rem);
 
     &__top {
         @extend %d-flex;
-        @extend %align-center;
+        
         @extend %flex-wrap;
         @extend %space-between;
         gap: toRem(20);
         padding-top: toRem(20);
         padding-bottom: toRem(20);
         border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+
+        @include max-sm {
+            flex-direction: column;
+        }
+        @include min-md {
+            align-items: center;
+        }
     }
 
     &__nav,
@@ -184,6 +289,9 @@ Version: 1.00
 
     &__nav {
         gap: toRem(16);
+        @include max-xs {
+            flex-direction: column;
+        }
 
         &__item {
             font-size: toRem(13);

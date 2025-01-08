@@ -6,24 +6,16 @@ function loadScript(src, options, onloadCallback) {
 	if (onloadCallback) script.onload = onloadCallback;
 	document.head.appendChild(script);
 };
-function loadStylesheet(href, options) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    if (options) Object.keys(options).forEach((key) => link.setAttribute(key, options[key]));
-    document.head.prepend(link);
-  }
-
 loadScript('https://code.jquery.com/jquery-3.7.1.js', {
 	async: true,
 	crossorigin: 'anonymous'
 }, function(){
-	console.log("All Onload Functions");
+	console.log("Jquery Loaded");
 	(function ($) {
 		"use strict"
 		$(document).ready(function () {
-              /* Lazy Load Counter Up Functions */
-            function loadFancyboxFunctions() {
+            /* Lazy Load Counter Up Functions */
+            function loadCounterUpFunctions() {
                 loadScript(
                     "https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js",
                     {
@@ -55,17 +47,16 @@ loadScript('https://code.jquery.com/jquery-3.7.1.js', {
                     }
                 );
             }
-            loadFancyboxFunctions();
-			
+            if($('[data-target="count"]').length > 0){
+                loadCounterUpFunctions()
+            };
+            /* Go To Section Function */
+            $('[data-goto]').on("click", function () {
+                $("html,body").animate({
+                    scrollTop: $($(this).data('goto')).get(0).offsetTop - 32
+                }, 1000)
+            });
 		});
-		// $(window).on("scroll", function () {
-		// 	var scrolling = $(this).scrollTop()
-	
-		// 	if (scrolling > 200) {
-		// 		$(".scroll-top").fadeIn()
-		// 	} else {
-		// 		$(".scroll-top").fadeOut()
-		// 	}
-		// });
+
 	})(jQuery)
 });
